@@ -1,0 +1,8 @@
+[append this in message body after prefix]
+from=foobar@hello.com
+to=company@example.com
+sub=ticket #1§241
+[]
+from=foobar@hello.com
+to=company@example.com
+sub=ticket #1§242
