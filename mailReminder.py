@@ -22,7 +22,8 @@ def runData():
 def mail(fr, to, sub, extraMsg):
     final_message = '%s %s. %s' % (getMsg()[0], extraMsg, getMsg()[1])
     command_line = 'echo "%s"|mail -s "%s" -r %s %s' % (final_message, sub, fr, to)
-    subprocess.Popen(command_line, shell=True)
+    data = subprocess.check_output(command_line, shell=True)
+    print('output of mail cmd: %s', data)
     print('mail sent to %s m:%s s:%s' % (to ,final_message, sub))
 
 runData()
