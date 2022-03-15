@@ -2,7 +2,7 @@ import configparser, os, subprocess, random
 
 def getMsg():
     data = configparser.ConfigParser(allow_no_value=True)
-    data.read('msg.ini')
+    data.read('msg.txt')
 
     s = random.choice(list(data['suffix'].keys()))
     p = random.choice(list(data['prefix'].keys()))
@@ -11,7 +11,7 @@ def getMsg():
 
 def runData():
     data = configparser.ConfigParser()
-    data.read('data.ini')
+    data.read('data.txt')
     getMsg()
     
     for section in data.sections():
